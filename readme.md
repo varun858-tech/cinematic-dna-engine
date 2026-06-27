@@ -159,19 +159,29 @@ The hybrid recommendation engine consistently produced semantically meaningful r
 
 ## Home Page
 
-> *(Add Screenshot Here)*
+<p align="center">
+  <img src="assets/home.png" width="95%">
+</p>
+
 
 ---
 
 ## Recommendations
 
-> *(Add Screenshot Here)*
+<p align="center">
+  <img src="assets/recommendations1.png" width="95%">
+</p>
+<p align="center">
+  <img src="assets/recommendations2.png" width="95%">
+</p>
 
 ---
 
 ## Director Spotlight
 
-> *(Add Screenshot Here)*
+<p align="center">
+  <img src="assets/director_spotlight.png" width="95%">
+</p>
 
 ---
 
