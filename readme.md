@@ -33,6 +33,10 @@ The project is designed to help users discover movies that "feel" similar, even 
 
 ---
 
+## 🚀 Live Demo
+
+👉 **Try the application:** https://cinematic-dna-engine-2n8k46uhuqgutmxdfjjvkd.streamlit.app/
+
 # 🏗 System Architecture
 
 ```
