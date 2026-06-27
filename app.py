@@ -1,4 +1,8 @@
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 os.environ["PYTHONUTF8"] = "1"  # Force Windows to drop cp1252 and decode UTF-8 globally
 
 import streamlit as st
@@ -152,7 +156,12 @@ def get_stable_session():
     return session
 
 session = get_stable_session()
-TMDB_ACCESS_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NzNlNDNlYmE3MDMxODgzYzVhZTI5ODE4NDgwNDI4MCIsIm5iZiI6MTc3MjEyNzAxOC45MTYsInN1YiI6IjY5YTA4MzJhMTFmNTkxNTk2ZGYyMDY1NSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ._8rLI9shumkeEqNQkwli8-2C06eoJwW5hjSSPNa6wqw".strip()
+
+from streamlit.errors import StreamlitSecretNotFoundError
+try:
+    TMDB_ACCESS_TOKEN = st.secrets["TMDB_ACCESS_TOKEN"]
+except StreamlitSecretNotFoundError:
+    TMDB_ACCESS_TOKEN = os.getenv("TMDB_ACCESS_TOKEN")
 
 def fetch_poster_url_ultimate(raw_id):
     """Your exact stable endpoint connection string converted for layout grids."""
